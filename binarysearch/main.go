@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
-	"practice_codes/data-structures/binarysearch/search"
+
+	search "github.com/rajesh063691/data-structures/binarysearch/search"
+
 	"time"
 )
 

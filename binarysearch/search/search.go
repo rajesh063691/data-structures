@@ -1,6 +1,6 @@
 package search
 
-// Binary Search Implementation
+// Binary Search Implementation ...
 func BinarySearch(sl []int, item int, left int, right int) int {
 	//base case
 	if right < left {
@@ -26,6 +26,7 @@ func BinarySearch(sl []int, item int, left int, right int) int {
 	return -1
 }
 
+// BinaryWithWhileLoop ...
 func BinaryWithWhileLoop(sl []int, target int) int {
 	first := 0
 	last := len(sl) - 1
