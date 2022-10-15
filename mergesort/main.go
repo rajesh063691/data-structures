@@ -18,7 +18,7 @@ func main() {
 	sl := []int{12, 11, 13, 5, 6, 7}
 
 	//arr := merge.Merge_Sort(sl)
-	usingindex.MergeSortWithIndex(sl, 0, len(sl)-1)
+	usingindex.MergeSortWithIndex(sl, 0, len(sl))
 	fmt.Println(sl)
 
 	fmt.Println("Is List Sorted: ", merge.VerifyIfListIsSorted(sl))

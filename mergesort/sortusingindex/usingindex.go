@@ -13,19 +13,8 @@ func MergeSortWithIndex(arr []int, start, end int) {
 }
 
 func MergeWithIndex(arr []int, left, mid, end int) {
-	L1 := make([]int, 0)
-	L2 := make([]int, 0)
-	l1 := (mid - left) + 1
-	l2 := end - mid
-	i, j := 0, 0
-	for i < l1 {
-		L1 = append(L1, arr[left+i])
-		i++
-	}
-	for j < l2 {
-		L2 = append(L2, arr[mid+1+j])
-		j++
-	}
+	L1 := arr[left:mid]
+	L2 := arr[mid:end]
 
 	i, j, k := 0, 0, 0
 	for i < len(L1) && j < len(L2) {

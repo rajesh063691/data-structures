@@ -35,6 +35,7 @@ func (l *LinkedList) AppendInList(item int) {
 	curr.next = newNode
 	l.size++
 }
+
 func (l *LinkedList) DeleteItemFromList(item int) {
 	curr := l.head
 	if curr == nil {
