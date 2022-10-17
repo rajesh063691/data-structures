@@ -19,6 +19,7 @@ func MergeSort(lt list.LinkedList) list.LinkedList {
 // SplitList ...
 func SplitList(lt list.LinkedList) (leftHalf, rightHalf list.LinkedList) {
 
+	// if list has zero or one item
 	if lt.Head == nil || lt.Head.Next == nil {
 		leftHalf = lt
 		rightHalf = list.LinkedList{}
