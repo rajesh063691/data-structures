@@ -23,7 +23,7 @@ func (l *LinkedList) AppendInList(item int) {
 	curr := l.head
 	//list is empty
 	if curr == nil {
-		curr = newNode
+		curr = newNode // this line can be removed and replace with l.head=newNode at line no 27
 		l.head = curr
 		l.size++
 		return
@@ -38,6 +38,7 @@ func (l *LinkedList) AppendInList(item int) {
 
 func (l *LinkedList) DeleteItemFromList(item int) {
 	curr := l.head
+	// list is empty
 	if curr == nil {
 		return
 	}
@@ -84,10 +85,19 @@ func (l *LinkedList) PrependInList(item int) {
 	newNode.next = curr
 	l.head = newNode
 
+	// increase the list size by 1
+	l.size++
+
 }
 
 // add element at a specific index
 func (l *LinkedList) AddAtSpecificIndex(index, item int) {
+	// check if index is lesses than 0 or greater than size of list
+	if index < 0 || index > l.size {
+		fmt.Print("entered position is invalid, please provide valid position.")
+		return
+	}
+
 	prev := l.head
 	pos := 0
 	newNode := new(Node)
