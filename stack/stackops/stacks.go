@@ -33,3 +33,15 @@ func (s *Stack) IsEmpty() int {
 
 	return size
 }
+
+// Peek - returns the top most element
+func (s *Stack) Peek() (peek int, err error) {
+	size := len(s.Items)
+	if size == 0 {
+		return -1, errors.New("stack is empty. underflow condition")
+	}
+
+	peek = s.Items[len(s.Items)-1]
+
+	return peek, nil
+}

@@ -17,11 +17,15 @@ func main() {
 
 	cl.DisplayListItems()
 
-	cl.DeleteAtGivenPosition(0)
-	cl.DeleteAtGivenPosition(1)
-	cl.DeleteAtGivenPosition(1)
-	cl.DeleteAtGivenPosition(3)
-	cl.DeleteAtGivenPosition(4)
+	// cl.DeleteAtGivenPosition(0)
+	// cl.DeleteAtGivenPosition(1)
+	// cl.DeleteAtGivenPosition(1)
+	// cl.DeleteAtGivenPosition(3)
+	// cl.DeleteAtGivenPosition(4)
+
+	// cl.DisplayListItems()
+
+	cl.ReverseCircularList()
 
 	cl.DisplayListItems()
 }

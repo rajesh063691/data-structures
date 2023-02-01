@@ -98,6 +98,32 @@ func (cl *CircularTailList) DeleteAtGivenPosition(pos int) {
 
 }
 
+func (cl *CircularTailList) ReverseCircularList() {
+	curr := cl.tail
+	// if head is nil, then list is empty. so first node will be the head node
+	if curr == nil {
+		fmt.Printf("list is empty, can not reverse.\n")
+		return
+	}
+
+	// reverse the circular list
+	curr = cl.tail.next  // logically, poiniting to head node
+	prev := cl.tail      // logically, poiniting to tail node
+	next := cl.tail.next // logically, poiniting to head node
+
+	// just make 1st node to point to tail node
+	for next != cl.tail {
+		next = next.next
+		curr.next = prev
+		prev = curr
+		curr = next
+	}
+	// we have reached before tails node
+	cl.tail = curr.next
+	curr.next = prev
+
+}
+
 func (cl *CircularTailList) DisplayListItems() {
 	curr := cl.tail
 	// If head is nil, then no item is in the list
