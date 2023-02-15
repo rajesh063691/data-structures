@@ -24,4 +24,5 @@ func main() {
 	fmt.Printf("Dequed item :: %d\n", q.Deque())
 	fmt.Printf("Dequed item :: %d\n", q.Deque())
 	q.DisplayQueue()
+	fmt.Printf("Peek item :: %d\n", q.QueuePeek())
 }
